@@ -1,6 +1,8 @@
 public class KnightBoard{
+	private int count;
 	private int[][] board;
 	public KnightBoard(int r, int c){
+		count = 1;
 		board = new int[r][c];
 		for (int i = 0; i < r; i++){
 			for (int j = 0; j < c; j++){
@@ -24,5 +26,12 @@ public class KnightBoard{
 			}
 		}
 		return str;
+	}
+	private boolean addNight(int y, int x){
+		if (board[y][x] != 0){
+			board[y][x] = count++;
+			return true;
+		}
+		return false;
 	}
 }
