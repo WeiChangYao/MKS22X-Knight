@@ -36,6 +36,12 @@ public class KnightBoard{
 	}
 	private boolean removeNight(int y, int x){
 		board[y][x] = 0;
+		count--;
 		return true;
 	}
+	public static void main(String[] args){
+		KnightBoard k = new KnightBoard(5,5);
+		System.out.println(k);
+	}
+
 }
