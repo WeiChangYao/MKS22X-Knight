@@ -8,4 +8,21 @@ public class KnightBoard{
 			}
 		}
 	}
+	public String toString(){
+		String str = "";
+		for (int i = 0; i < board.length; i++){
+			for (int j = 0; j < board[i].length; j++){
+				if (board[i][j] == 0){
+					str+= "__";
+				}
+				if (board[i][j] <= 9){
+					str+= " "+board[i][j];
+				}
+				else{
+					str+= board[i][j];
+				}
+			}
+		}
+		return str;
+	}
 }
