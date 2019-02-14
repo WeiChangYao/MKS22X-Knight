@@ -29,7 +29,7 @@ public class KnightBoard{
 		return str;
 	}
 	private boolean addNight(int y, int x){
-		if (board[y][x] != 0){
+		if (board[y][x] == 0){
 			board[y][x] = count++;
 			return true;
 		}
@@ -43,6 +43,10 @@ public class KnightBoard{
 	public static void main(String[] args){
 		KnightBoard k = new KnightBoard(5,5);
 		System.out.println(k);
+		k.addNight(1,1);
+		k.addNight(1,2);
+		System.out.println(k);
+
 	}
 
 }
