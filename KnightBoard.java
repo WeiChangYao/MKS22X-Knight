@@ -34,4 +34,8 @@ public class KnightBoard{
 		}
 		return false;
 	}
+	private boolean removeNight(int y, int x){
+		board[y][x] = 0;
+		return true;
+	}
 }
