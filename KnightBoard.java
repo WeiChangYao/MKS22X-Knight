@@ -15,15 +15,16 @@ public class KnightBoard{
 		for (int i = 0; i < board.length; i++){
 			for (int j = 0; j < board[i].length; j++){
 				if (board[i][j] == 0){
-					str+= "__";
+					str+= "__ ";
 				}
-				if (board[i][j] <= 9){
-					str+= " "+board[i][j];
+				if (board[i][j] <= 9 && board[i][j] > 0){
+					str+= " "+board[i][j] +" ";
 				}
-				else{
-					str+= board[i][j];
+				if (board[i][j] > 9){
+						str+= board[i][j] + " ";
 				}
 			}
+			str+= "\n";
 		}
 		return str;
 	}
