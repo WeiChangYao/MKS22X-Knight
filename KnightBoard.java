@@ -1,8 +1,10 @@
 public class KnightBoard{
 	private int count;
+	private int space;
 	private int[][] board;
 	public KnightBoard(int r, int c){
 		count = 1;
+		space = r*c;
 		board = new int[r][c];
 		for (int i = 0; i < r; i++){
 			for (int j = 0; j < c; j++){
@@ -40,8 +42,18 @@ public class KnightBoard{
 		count--;
 		return true;
 	}
+	public boolean solveH(int y, int x){
+		if (space <=0){
+			return true;
+		}
+		
+	}
+
+	public boolean solve(int y, int x){
+
+	}
 	public static void main(String[] args){
-		KnightBoard k = new KnightBoard(5,5);
+		KnightBoard k = new KnightBoard(3,3);
 		system.out.println(k);
 	}
 
