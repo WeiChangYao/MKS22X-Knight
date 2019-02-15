@@ -42,11 +42,7 @@ public class KnightBoard{
 	}
 	public static void main(String[] args){
 		KnightBoard k = new KnightBoard(5,5);
-		System.out.println(k);
-		k.addNight(1,1);
-		k.addNight(1,2);
-		System.out.println(k);
-
+		system.out.println(k);
 	}
 
 }
