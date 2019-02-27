@@ -49,6 +49,10 @@ public class KnightBoard{
 		
 	}
 
+  private boolean isPlacable(int y, int x){
+    return ((y>0 && y<board.length) && (x>0 && x<board[y].length));
+  }
+  
 	public boolean solve(int y, int x){
 
 	}
