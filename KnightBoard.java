@@ -46,7 +46,27 @@ public class KnightBoard{
 		if (space <=0){
 			return true;
 		}
-    while(isPlacable(y+1,x+2)
+    if (isPlacable(y+1,x+2)){
+      addNight(y+1,x+2);
+      if (solveH(y+1,x+2)){
+        return true;
+      }
+      else{
+        removeNight(y+1,x+2);
+      }
+      return false;
+    }
+    if (isPlacable(y+1,x+2)){
+      addNight(y+1,x+2);
+      if (solveH(y+1,x+2)){
+        return true;
+      }
+      else{
+        removeNight(y+1,x+2);
+      }
+      return false;
+    }
+    /*while(isPlacable(y+1,x+2)
          || isPlacable(y-1,x+2)
          || isPlacable(y+2,x+1)
          || isPlacable(y+2,x-1)
@@ -54,8 +74,7 @@ public class KnightBoard{
          || isPlacable(y-2,x-1)
          || isPlacable(y+1,X-2)
          || isPlacable(y-1,x-2)){
-      
-    }
+    }*/
 	}
 
   private boolean isPlacable(int y, int x){
