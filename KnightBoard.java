@@ -42,6 +42,7 @@ public class KnightBoard{
 		count--;
 		return true;
 	}
+
 	public boolean solveH(int y, int x){
 		if (space <=0){
 			return true;
@@ -64,7 +65,6 @@ public class KnightBoard{
       else{
         removeNight(y+1,x+2);
       }
-      return false;
     }
     /*while(isPlacable(y+1,x+2)
          || isPlacable(y-1,x+2)
@@ -75,6 +75,7 @@ public class KnightBoard{
          || isPlacable(y+1,X-2)
          || isPlacable(y-1,x-2)){
     }*/
+    return false;
 	}
 
   private boolean isPlacable(int y, int x){
@@ -86,7 +87,7 @@ public class KnightBoard{
 	//}
 	public static void main(String[] args){
 		KnightBoard k = new KnightBoard(3,3);
-		system.out.println(k);
+		System.out.println(k);
 	}
 
 }
