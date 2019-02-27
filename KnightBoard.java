@@ -50,12 +50,12 @@ public class KnightBoard{
 	}
 
   private boolean isPlacable(int y, int x){
-    return ((y>0 && y<board.length) && (x>0 && x<board[y].length));
+    return ((y>0 && y<board.length) && (x>0 && x<board[y].length) && (board[y][x] == 0));
   }
   
-	public boolean solve(int y, int x){
+	//public boolean solve(int y, int x){
 
-	}
+	//}
 	public static void main(String[] args){
 		KnightBoard k = new KnightBoard(3,3);
 		system.out.println(k);
