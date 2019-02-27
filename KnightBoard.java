@@ -46,7 +46,16 @@ public class KnightBoard{
 		if (space <=0){
 			return true;
 		}
-		
+    while(isPlacable(y+1,x+2)
+         || isPlacable(y-1,x+2)
+         || isPlacable(y+2,x+1)
+         || isPlacable(y+2,x-1)
+         || isPlacable(y-2,x+1)
+         || isPlacable(y-2,x-1)
+         || isPlacable(y+1,X-2)
+         || isPlacable(y-1,x-2)){
+      
+    }
 	}
 
   private boolean isPlacable(int y, int x){
