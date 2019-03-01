@@ -57,13 +57,67 @@ public class KnightBoard{
       }
       return false;
     }
-    if (isPlacable(y+1,x+2)){
-      addNight(y+1,x+2);
-      if (solveH(y+1,x+2)){
+    if (isPlacable(y-1,x+2)){
+      addNight(y-1,x+2);
+      if (solveH(y-1,x+2)){
         return true;
       }
       else{
-        removeNight(y+1,x+2);
+        removeNight(y-1,x+2);
+      }
+    }
+    if (isPlacable(y+2,x+1)){
+      addNight(y+2,x+1);
+      if (solveH(y+2,x+1)){
+        return true;
+      }
+      else{
+        removeNight(y+2,x+1);
+      }
+    }
+    if (isPlacable(y+2,x-1)){
+      addNight(y+2,x-1);
+      if (solveH(y+2,x-1)){
+        return true;
+      }
+      else{
+        removeNight(y+2,x-1);
+      }
+    }
+    if (isPlacable(y-2,x+1)){
+      addNight(y-2,x+1);
+      if (solveH(y-2,x+1)){
+        return true;
+      }
+      else{
+        removeNight(y-2,x+1);
+      }
+    }
+    if (isPlacable(y-2,x-1)){
+      addNight(y-2,x-1);
+      if (solveH(y-2,x-1)){
+        return true;
+      }
+      else{
+        removeNight(y-2,x-1);
+      }
+    }
+    if (isPlacable(y+1,x-2)){
+      addNight(y+1,x-2);
+      if (solveH(y+1,x-2)){
+        return true;
+      }
+      else{
+        removeNight(y+1,x-2);
+      }
+    }
+    if (isPlacable(y-1,x-2)){
+      addNight(y-1,x-2);
+      if (solveH(y-1,x-2)){
+        return true;
+      }
+      else{
+        removeNight(y-1,x-2);
       }
     }
     /*while(isPlacable(y+1,x+2)
