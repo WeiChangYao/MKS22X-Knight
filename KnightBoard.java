@@ -33,6 +33,7 @@ public class KnightBoard{
 	private boolean addNight(int y, int x){
 		if (board[y][x] == 0){
 			board[y][x] = count++;
+      space -= 1;
 			return true;
 		}
 		return false;
@@ -40,6 +41,7 @@ public class KnightBoard{
 	private boolean removeNight(int y, int x){
 		board[y][x] = 0;
 		count--;
+    space++;
 		return true;
 	}
 
@@ -65,6 +67,7 @@ public class KnightBoard{
       else{
         removeNight(y-1,x+2);
       }
+      return false;
     }
     if (isPlacable(y+2,x+1)){
       addNight(y+2,x+1);
@@ -74,6 +77,7 @@ public class KnightBoard{
       else{
         removeNight(y+2,x+1);
       }
+      return false;
     }
     if (isPlacable(y+2,x-1)){
       addNight(y+2,x-1);
@@ -83,6 +87,7 @@ public class KnightBoard{
       else{
         removeNight(y+2,x-1);
       }
+      return false;
     }
     if (isPlacable(y-2,x+1)){
       addNight(y-2,x+1);
@@ -92,6 +97,7 @@ public class KnightBoard{
       else{
         removeNight(y-2,x+1);
       }
+      return false;
     }
     if (isPlacable(y-2,x-1)){
       addNight(y-2,x-1);
@@ -101,6 +107,7 @@ public class KnightBoard{
       else{
         removeNight(y-2,x-1);
       }
+      return false;
     }
     if (isPlacable(y+1,x-2)){
       addNight(y+1,x-2);
@@ -110,6 +117,7 @@ public class KnightBoard{
       else{
         removeNight(y+1,x-2);
       }
+      return false;
     }
     if (isPlacable(y-1,x-2)){
       addNight(y-1,x-2);
@@ -119,6 +127,7 @@ public class KnightBoard{
       else{
         removeNight(y-1,x-2);
       }
+      return false;
     }
     /*while(isPlacable(y+1,x+2)
          || isPlacable(y-1,x+2)
@@ -137,11 +146,30 @@ public class KnightBoard{
   }
   
 	public boolean solve(int y, int x){
+    
+                   clearTerminal();
+            System.out.println(this);
+            wait(20);
+    
     return solveH(y,x);
 	}
+  
+      private void wait(int millis){
+         try {
+             Thread.sleep(millis);
+         }
+         catch (InterruptedException e) {
+         }
+     }
+     public void clearTerminal(){
+        //erase terminal, go to top left of screen.
+        System.out.println("\033[2J\033[1;1H");
+    }
 	public static void main(String[] args){
-		KnightBoard k = new KnightBoard(3,3);
+		KnightBoard k = new KnightBoard(5,5);
 		System.out.println(k);
+    k.solve(1,1);
+   	System.out.println(k);
 	}
 
 }
